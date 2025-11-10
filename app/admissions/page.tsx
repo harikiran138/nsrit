@@ -36,17 +36,17 @@ export default function AdmissionsPage() {
         title: 'Apply Now / Contact / Downloads',
         content: (
           <div className="space-y-4">
-            <a href="#" className="inline-flex items-center gap-2 px-6 py-3 bg-corporate-blue text-white font-semibold rounded-lg hover:opacity-90 transition-all">
+            <a href="#" className="inline-flex items-center gap-2 px-6 py-3 bg-primary-500 text-white font-semibold rounded-lg hover:opacity-90 transition-all bg-glossy-radial">
               <Send className="w-5 h-5" /> Apply Now
             </a>
             <ul className="space-y-2 pt-4">
               <li>
-                <a href="#" className="flex items-center gap-2 text-corporate-blue hover:underline">
+                <a href="#" className="flex items-center gap-2 text-primary-500 hover:underline">
                   <Download className="w-4 h-4" /> Admission Brochure
                 </a>
               </li>
               <li>
-                <a href="#" className="flex items-center gap-2 text-corporate-blue hover:underline">
+                <a href="#" className="flex items-center gap-2 text-primary-500 hover:underline">
                   <Download className="w-4 h-4" /> Fee Structure
                 </a>
               </li>

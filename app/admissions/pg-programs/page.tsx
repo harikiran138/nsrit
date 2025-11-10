@@ -18,11 +18,11 @@ export default function PostgraduatePage() {
               { name: 'MBA', specialization: 'General Management, Finance, HR', duration: '2 years' },
             ].map((prog, idx) => (
               <div key={idx} className="p-6 bg-white dark:bg-gray-700 rounded-lg border border-gray-200 dark:border-gray-600 hover:shadow-lg transition-shadow">
-                <h4 className="font-bold text-corporate-navy dark:text-white mb-2">{prog.name}</h4>
+                <h4 className="font-bold text-primary-800 dark:text-white mb-2">{prog.name}</h4>
                 <p className="text-xs text-corporate-textSecondary dark:text-gray-400 mb-2">
                   <span className="font-semibold">Specialization:</span> {prog.specialization}
                 </p>
-                <p className="text-xs text-corporate-blue font-semibold">{prog.duration}</p>
+                <p className="text-xs text-primary-500 font-semibold">{prog.duration}</p>
               </div>
             ))}
           </div>
@@ -33,7 +33,7 @@ export default function PostgraduatePage() {
         content: (
           <div className="grid md:grid-cols-2 gap-6">
             <div className="p-6 bg-white dark:bg-gray-700 rounded-lg border border-gray-200 dark:border-gray-600">
-              <h4 className="font-bold text-corporate-navy dark:text-white mb-4">M.Tech Eligibility</h4>
+              <h4 className="font-bold text-primary-800 dark:text-white mb-4">M.Tech Eligibility</h4>
               <ul className="space-y-2 text-corporate-textSecondary dark:text-gray-400 text-sm">
                 <li>• B.Tech in relevant discipline (min 60% or 6.0 CGPA)</li>
                 <li>• GATE score required</li>
@@ -42,7 +42,7 @@ export default function PostgraduatePage() {
               </ul>
             </div>
             <div className="p-6 bg-white dark:bg-gray-700 rounded-lg border border-gray-200 dark:border-gray-600">
-              <h4 className="font-bold text-corporate-navy dark:text-white mb-4">MBA Eligibility</h4>
+              <h4 className="font-bold text-primary-800 dark:text-white mb-4">MBA Eligibility</h4>
               <ul className="space-y-2 text-corporate-textSecondary dark:text-gray-400 text-sm">
                 <li>• Bachelor&apos;s degree in any discipline</li>
                 <li>• CAT/MAT/XAT score required</li>
@@ -57,8 +57,8 @@ export default function PostgraduatePage() {
         title: 'Application Process',
         content: (
           <div className="space-y-6">
-            <div className="p-6 bg-blue-50 dark:bg-blue-900/30 rounded-lg border border-blue-200 dark:border-blue-700">
-              <h4 className="font-bold text-corporate-navy dark:text-white mb-3">Application Steps</h4>
+            <div className="p-6 bg-primary-50 dark:bg-primary-900/30 rounded-lg border border-primary-200 dark:border-primary-700">
+              <h4 className="font-bold text-primary-800 dark:text-white mb-3">Application Steps</h4>
               <ol className="space-y-2 text-corporate-textSecondary dark:text-gray-400 text-sm">
                 <li>1. Register on the admissions portal</li>
                 <li>2. Fill application form completely</li>
@@ -69,17 +69,17 @@ export default function PostgraduatePage() {
               </ol>
             </div>
             <div className="grid md:grid-cols-2 gap-6">
-              <div className="p-6 bg-white dark:bg-gray-700 rounded-lg border-2 border-gray-200 dark:border-gray-600 hover:border-corporate-blue transition-colors">
-                <h4 className="font-bold text-corporate-navy dark:text-white mb-3">Apply Online</h4>
+              <div className="p-6 bg-white dark:bg-gray-700 rounded-lg border-2 border-gray-200 dark:border-gray-600 hover:border-primary-500 transition-colors">
+                <h4 className="font-bold text-primary-800 dark:text-white mb-3">Apply Online</h4>
                 <p className="text-sm text-corporate-textSecondary dark:text-gray-400 mb-4">
                   Begin your application for M.Tech or MBA programs
                 </p>
-                <a href="#" className="inline-block px-4 py-2 bg-corporate-blue text-white rounded-lg hover:opacity-90 text-sm font-medium">
+                <a href="#" className="inline-block px-4 py-2 bg-primary-500 text-white rounded-lg hover:opacity-90 text-sm font-medium bg-glossy-radial">
                   Start Application
                 </a>
               </div>
-              <div className="p-6 bg-white dark:bg-gray-700 rounded-lg border-2 border-gray-200 dark:border-gray-600 hover:border-corporate-blue transition-colors">
-                <h4 className="font-bold text-corporate-navy dark:text-white mb-3">Important Dates</h4>
+              <div className="p-6 bg-white dark:bg-gray-700 rounded-lg border-2 border-gray-200 dark:border-gray-600 hover:border-primary-500 transition-colors">
+                <h4 className="font-bold text-primary-800 dark:text-white mb-3">Important Dates</h4>
                 <ul className="space-y-1 text-xs text-corporate-textSecondary dark:text-gray-400">
                   <li>• Application Opens: May 2024</li>
                   <li>• Deadline: July 2024</li>
