@@ -41,16 +41,16 @@ export default function QuickAccessCards() {
               <AnimatedSection key={card.title} delay={index * 0.1}>
                 <Link href={card.href}>
                   <div className="card group hover:shadow-lg hover:-translate-y-1 transition-all h-full">
-                    <div className="w-12 h-12 bg-gradient-to-br from-blue-50 to-blue-100 dark:from-blue-900 dark:to-blue-800 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                      <card.icon className="w-6 h-6 text-corporate-blue" />
+                    <div className="w-12 h-12 bg-gradient-to-br from-primary-50 to-primary-100 dark:from-primary-900 dark:to-primary-800 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                      <card.icon className="w-6 h-6 text-primary-500" />
                     </div>
-                    <h3 className="text-lg font-bold text-corporate-navy dark:text-white mb-3">
+                    <h3 className="text-lg font-bold text-primary-800 dark:text-white mb-3">
                       {card.title}
                     </h3>
                     <p className="text-corporate-textSecondary dark:text-gray-400 text-sm leading-relaxed mb-4">
                       {card.description}
                     </p>
-                    <div className="flex items-center text-corporate-blue font-semibold text-sm group-hover:gap-2 transition-all">
+                    <div className="flex items-center text-primary-500 font-semibold text-sm group-hover:gap-2 transition-all">
                       Learn More <ArrowRight className="w-4 h-4" />
                     </div>
                   </div>

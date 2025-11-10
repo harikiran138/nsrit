@@ -92,7 +92,7 @@ export default function FeedbackForm() {
   return (
     <form onSubmit={handleSubmit} className="max-w-2xl mx-auto">
       <Card variant="default">
-        <h2 className="text-3xl md:text-4xl font-bold text-corporate-blue dark:text-white mb-2">
+        <h2 className="text-3xl md:text-4xl font-bold text-primary-500 dark:text-white mb-2">
           Send Us Your Feedback
         </h2>
         <p className="text-corporate-textSecondary dark:text-gray-400 mb-8">
@@ -102,7 +102,7 @@ export default function FeedbackForm() {
         <div className="space-y-6">
           {/* Name Field */}
           <div>
-            <label htmlFor="name" className="block text-sm font-semibold text-corporate-navy dark:text-white mb-2">
+            <label htmlFor="name" className="block text-sm font-semibold text-primary-800 dark:text-white mb-2">
               Name *
             </label>
             <input
@@ -114,10 +114,10 @@ export default function FeedbackForm() {
               value={formData.name}
               onChange={handleChange}
               onBlur={() => handleBlur('name')}
-              className={`w-full px-4 py-3 rounded-lg border-2 transition-all bg-white dark:bg-gray-900 text-corporate-navy dark:text-white placeholder-gray-400 dark:placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-0 ${
+              className={`w-full px-4 py-3 rounded-lg border-2 transition-all bg-white dark:bg-gray-900 text-primary-800 dark:text-white placeholder-gray-400 dark:placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-0 ${
                 errors.name && touched.name
                   ? 'border-red-400 focus:border-red-500 focus:ring-red-500'
-                  : 'border-gray-200 dark:border-gray-700 focus:border-corporate-blue focus:ring-corporate-blue'
+                  : 'border-gray-200 dark:border-gray-700 focus:border-primary-500 focus:ring-primary-500'
               }`}
             />
             {errors.name && touched.name && (
@@ -130,7 +130,7 @@ export default function FeedbackForm() {
 
           {/* Email Field */}
           <div>
-            <label htmlFor="email" className="block text-sm font-semibold text-corporate-navy dark:text-white mb-2">
+            <label htmlFor="email" className="block text-sm font-semibold text-primary-800 dark:text-white mb-2">
               Email *
             </label>
             <input
@@ -142,10 +142,10 @@ export default function FeedbackForm() {
               value={formData.email}
               onChange={handleChange}
               onBlur={() => handleBlur('email')}
-              className={`w-full px-4 py-3 rounded-lg border-2 transition-all bg-white dark:bg-gray-900 text-corporate-navy dark:text-white placeholder-gray-400 dark:placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-0 ${
+              className={`w-full px-4 py-3 rounded-lg border-2 transition-all bg-white dark:bg-gray-900 text-primary-800 dark:text-white placeholder-gray-400 dark:placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-0 ${
                 errors.email && touched.email
                   ? 'border-red-400 focus:border-red-500 focus:ring-red-500'
-                  : 'border-gray-200 dark:border-gray-700 focus:border-corporate-blue focus:ring-corporate-blue'
+                  : 'border-gray-200 dark:border-gray-700 focus:border-primary-500 focus:ring-primary-500'
               }`}
             />
             {errors.email && touched.email && (
@@ -158,7 +158,7 @@ export default function FeedbackForm() {
 
           {/* Category Field */}
           <div>
-            <label htmlFor="category" className="block text-sm font-semibold text-corporate-navy dark:text-white mb-2">
+            <label htmlFor="category" className="block text-sm font-semibold text-primary-800 dark:text-white mb-2">
               Feedback Category
             </label>
             <select
@@ -166,7 +166,7 @@ export default function FeedbackForm() {
               name="category"
               value={formData.category}
               onChange={handleChange}
-              className="w-full px-4 py-3 rounded-lg border-2 border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 text-corporate-navy dark:text-white focus:outline-none focus:ring-2 focus:border-corporate-blue focus:ring-corporate-blue transition-all"
+              className="w-full px-4 py-3 rounded-lg border-2 border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 text-primary-800 dark:text-white focus:outline-none focus:ring-2 focus:border-primary-500 focus:ring-primary-500 transition-all"
             >
               <option value="general">General Feedback</option>
               <option value="academic">Academic</option>
@@ -182,7 +182,7 @@ export default function FeedbackForm() {
 
           {/* Message Field */}
           <div>
-            <label htmlFor="message" className="block text-sm font-semibold text-corporate-navy dark:text-white mb-2">
+            <label htmlFor="message" className="block text-sm font-semibold text-primary-800 dark:text-white mb-2">
               Message *
             </label>
             <textarea
@@ -194,10 +194,10 @@ export default function FeedbackForm() {
               onChange={handleChange}
               onBlur={() => handleBlur('message')}
               rows={5}
-              className={`w-full px-4 py-3 rounded-lg border-2 transition-all bg-white dark:bg-gray-900 text-corporate-navy dark:text-white placeholder-gray-400 dark:placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-0 resize-none ${
+              className={`w-full px-4 py-3 rounded-lg border-2 transition-all bg-white dark:bg-gray-900 text-primary-800 dark:text-white placeholder-gray-400 dark:placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-0 resize-none ${
                 errors.message && touched.message
                   ? 'border-red-400 focus:border-red-500 focus:ring-red-500'
-                  : 'border-gray-200 dark:border-gray-700 focus:border-corporate-blue focus:ring-corporate-blue'
+                  : 'border-gray-200 dark:border-gray-700 focus:border-primary-500 focus:ring-primary-500'
               }`}
             />
             <div className="flex justify-between items-center mt-2">

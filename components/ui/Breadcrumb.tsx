@@ -112,7 +112,7 @@ export default function Breadcrumb({
     <nav
       className={`flex items-center gap-2 text-sm overflow-x-auto py-3 px-4 md:px-6 ${
         dark
-          ? 'bg-corporate-navy/10 dark:bg-white/10'
+          ? 'bg-primary-800/10 dark:bg-white/10'
           : 'bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-800'
       } ${className}`}
       aria-label="Breadcrumb"
@@ -179,7 +179,7 @@ export default function Breadcrumb({
                   className={`px-2 py-1 rounded whitespace-nowrap font-semibold ${
                     dark
                       ? 'text-white'
-                      : 'text-corporate-navy dark:text-white'
+                      : 'text-primary-800 dark:text-white'
                   }`}
                   aria-current={isCurrent ? 'page' : undefined}
                 >

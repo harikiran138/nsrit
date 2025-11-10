@@ -23,7 +23,7 @@ const NavLink = ({ item, onClick }: { item: MenuItem; onClick: () => void }) => 
       <Link
         href={item.href}
         onClick={handleToggle}
-        className="flex items-center justify-between px-4 py-2 text-gray-800 dark:text-gray-200 hover:bg-blue-50 dark:hover:bg-gray-700"
+        className="flex items-center justify-between px-4 py-2 text-gray-800 dark:text-gray-200 hover:bg-primary-50 dark:hover:bg-gray-700"
       >
         {item.name}
         {item.submenu && <ChevronDown className={`w-4 h-4 transition-transform ${isOpen ? 'rotate-180' : ''}`} />}
@@ -62,22 +62,22 @@ export default function Navbar() {
   }, []);
 
   return (
-    <nav ref={navRef} className="relative z-40 bg-gradient-to-r from-corporate-navy to-corporate-blue text-white shadow-lg">
-      <div className="bg-corporate-dark border-b-[3px] border-corporate-blue">
+    <nav ref={navRef} className="relative z-40 bg-gradient-to-r from-primary-800 to-primary-600 text-white shadow-lg bg-glossy-radial">
+      <div className="bg-corporate-dark border-b-[3px] border-primary-600">
         <div className="section-container py-2 flex justify-between items-center text-sm text-white">
           <div>
             <span className="font-bold">NSRIET</span>
           </div>
           <div className="hidden lg:flex items-center space-x-4">
-            <Link href="#" className="hover:text-corporate-lightBlue">Circular Notification</Link>
+            <Link href="#" className="hover:text-primary-300">Circular Notification</Link>
             <span>|</span>
-            <Link href="#" className="hover:text-corporate-lightBlue">Upcoming Events</Link>
+            <Link href="#" className="hover:text-primary-300">Upcoming Events</Link>
             <span>|</span>
-            <Link href="/quick-links/feedback" className="hover:text-corporate-lightBlue">Feedback</Link>
+            <Link href="/quick-links/feedback" className="hover:text-primary-300">Feedback</Link>
             <span>|</span>
-            <Link href="#" className="hover:text-corporate-lightBlue">News Bulletin</Link>
+            <Link href="#" className="hover:text-primary-300">News Bulletin</Link>
             <span>|</span>
-            <Link href="/cdc/career-guidance" className="hover:text-corporate-lightBlue">Career Opportunities</Link>
+            <Link href="/cdc/career-guidance" className="hover:text-primary-300">Career Opportunities</Link>
           </div>
         </div>
       </div>
@@ -111,7 +111,7 @@ export default function Navbar() {
                       <div key={subItem.name} className="relative group/submenu">
                         <Link
                           href={subItem.href}
-                          className="block px-5 py-3 text-gray-800 dark:text-gray-200 hover:bg-blue-50 dark:hover:bg-gray-700 transition-colors font-medium text-sm border-b border-gray-100 dark:border-gray-700 last:border-b-0 flex items-center justify-between"
+                          className="block px-5 py-3 text-gray-800 dark:text-gray-200 hover:bg-primary-50 dark:hover:bg-gray-700 transition-colors font-medium text-sm border-b border-gray-100 dark:border-gray-700 last:border-b-0 flex items-center justify-between"
                         >
                           {subItem.name}
                            {subItem.submenu && <ChevronDown className="w-3 h-3 opacity-50 ml-2" />}
@@ -122,7 +122,7 @@ export default function Navbar() {
                               <Link
                                 key={subSubItem.name}
                                 href={subSubItem.href}
-                                className="block px-4 py-2.5 text-gray-800 dark:text-gray-200 hover:bg-blue-50 dark:hover:bg-gray-700"
+                                className="block px-4 py-2.5 text-gray-800 dark:text-gray-200 hover:bg-primary-50 dark:hover:bg-gray-700"
                               >
                                 {subSubItem.name}
                               </Link>

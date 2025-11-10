@@ -32,7 +32,7 @@ export default function Highlights() {
       <div className="section-container px-4 sm:px-6 lg:px-8">
         <AnimatedSection>
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-corporate-navy dark:text-white mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-primary-800 dark:text-white mb-4">
               Our Highlights
             </h2>
             <p className="text-corporate-textSecondary dark:text-gray-400 text-lg max-w-2xl mx-auto">
@@ -44,10 +44,10 @@ export default function Highlights() {
           {highlights.map((highlight, index) => (
             <AnimatedSection key={highlight.title} delay={index * 0.1}>
               <div className="card text-center group hover:shadow-lg hover:-translate-y-1 transition-all h-full">
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-blue-50 to-blue-100 dark:from-blue-900 dark:to-blue-800 rounded-full mb-4 group-hover:scale-110 transition-transform">
-                  <highlight.icon className="w-8 h-8 text-corporate-blue" />
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-primary-50 to-primary-100 dark:from-primary-900 dark:to-primary-800 rounded-full mb-4 group-hover:scale-110 transition-transform">
+                  <highlight.icon className="w-8 h-8 text-primary-500" />
                 </div>
-                <h3 className="text-lg font-bold text-corporate-navy dark:text-white mb-3">
+                <h3 className="text-lg font-bold text-primary-800 dark:text-white mb-3">
                   {highlight.title}
                 </h3>
                 <p className="text-corporate-textSecondary dark:text-gray-400 text-sm leading-relaxed">

@@ -42,33 +42,33 @@ export default function CourseCard({
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         />
         <div className="absolute top-4 left-4">
-          <span className="px-3 py-1 bg-corporate-navy text-white font-bold text-sm">
+          <span className="px-3 py-1 bg-primary-800 text-white font-bold text-sm">
             {code}
           </span>
         </div>
       </div>
 
       <div className="p-6">
-        <h3 className="text-xl font-bold text-corporate-navy dark:text-white mb-4">
+        <h3 className="text-xl font-bold text-primary-800 dark:text-white mb-4">
           {name}
         </h3>
 
         <div className="space-y-3 mb-6">
           <div className="flex items-center gap-2 text-corporate-textSecondary dark:text-gray-400 text-sm">
-            <Clock className="w-4 h-4 text-corporate-blue" />
+            <Clock className="w-4 h-4 text-primary-500" />
             <span>Duration: {duration}</span>
           </div>
           <div className="flex items-center gap-2 text-corporate-textSecondary dark:text-gray-400 text-sm">
-            <Users className="w-4 h-4 text-corporate-blue" />
+            <Users className="w-4 h-4 text-primary-500" />
             <span>Available Seats: {seats}</span>
           </div>
           <div className="flex items-start gap-2 text-corporate-textSecondary dark:text-gray-400 text-sm">
-            <Check className="w-4 h-4 text-corporate-blue mt-0.5 flex-shrink-0" />
+            <Check className="w-4 h-4 text-primary-500 mt-0.5 flex-shrink-0" />
             <span>{eligibility}</span>
           </div>
         </div>
 
-        <button className="w-full px-6 py-3 bg-corporate-blue text-white font-semibold hover:bg-opacity-90 transition-colors">
+        <button className="w-full px-6 py-3 bg-primary-500 text-white font-semibold hover:bg-opacity-90 transition-colors bg-glossy-radial">
           Apply Now
         </button>
       </div>

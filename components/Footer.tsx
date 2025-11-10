@@ -33,7 +33,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-gradient-to-b from-blue-600 to-blue-900 text-white pt-16 pb-0">
+    <footer className="bg-gradient-to-b from-primary-600 to-primary-900 text-white pt-16 pb-0 bg-glossy-radial">
       {/* Main Footer Content */}
       <div className="section-container px-4 sm:px-6 lg:px-8 pb-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12">
@@ -52,7 +52,7 @@ export default function Footer() {
               className="mb-4 bg-white/10 rounded-lg p-2 backdrop-blur-sm"
             />
             <h3 className="font-bold text-xl mb-4">NSRIET</h3>
-            <p className="text-blue-100 text-sm leading-relaxed">
+            <p className="text-primary-100 text-sm leading-relaxed">
               Excellence in Engineering Education. Empowering students with knowledge, skills, and innovation for a better tomorrow.
             </p>
           </motion.div>
@@ -65,7 +65,7 @@ export default function Footer() {
             viewport={{ once: true }}
           >
             <h4 className="font-bold text-lg mb-6 flex items-center gap-2">
-              <span className="w-1 h-6 bg-blue-400 rounded-full"></span>
+              <span className="w-1 h-6 bg-primary-400 rounded-full"></span>
               Quick Links
             </h4>
             <ul className="space-y-3 text-sm">
@@ -73,9 +73,9 @@ export default function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="group flex items-center gap-2 text-blue-100 hover:text-white transition-colors duration-300"
+                    className="group flex items-center gap-2 text-primary-100 hover:text-white transition-colors duration-300"
                   >
-                    <span className="w-1 h-1 bg-blue-400 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                    <span className="w-1 h-1 bg-primary-400 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
                     {link.label}
                   </Link>
                 </li>
@@ -91,7 +91,7 @@ export default function Footer() {
             viewport={{ once: true }}
           >
             <h4 className="font-bold text-lg mb-6 flex items-center gap-2">
-              <span className="w-1 h-6 bg-blue-400 rounded-full"></span>
+              <span className="w-1 h-6 bg-primary-400 rounded-full"></span>
               Important Links
             </h4>
             <ul className="space-y-3 text-sm">
@@ -99,9 +99,9 @@ export default function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="group flex items-center gap-2 text-blue-100 hover:text-white transition-colors duration-300"
+                    className="group flex items-center gap-2 text-primary-100 hover:text-white transition-colors duration-300"
                   >
-                    <span className="w-1 h-1 bg-blue-400 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                    <span className="w-1 h-1 bg-primary-400 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
                     {link.label}
                   </Link>
                 </li>
@@ -117,21 +117,21 @@ export default function Footer() {
             viewport={{ once: true }}
           >
             <h4 className="font-bold text-lg mb-6 flex items-center gap-2">
-              <span className="w-1 h-6 bg-blue-400 rounded-full"></span>
+              <span className="w-1 h-6 bg-primary-400 rounded-full"></span>
               Contact Info
             </h4>
             <ul className="space-y-4 text-sm">
               <li className="flex items-start gap-3 group">
-                <MapPin className="w-5 h-5 flex-shrink-0 mt-0.5 text-blue-400 group-hover:scale-110 transition-transform" />
-                <span className="text-blue-100">NSRIET Campus, Education District, City, State - 123456</span>
+                <MapPin className="w-5 h-5 flex-shrink-0 mt-0.5 text-primary-400 group-hover:scale-110 transition-transform" />
+                <span className="text-primary-100">NSRIET Campus, Education District, City, State - 123456</span>
               </li>
               <li className="flex items-center gap-3 group hover:text-white transition-colors">
-                <Phone className="w-5 h-5 flex-shrink-0 text-blue-400 group-hover:scale-110 transition-transform" />
-                <span className="text-blue-100">+91 1234567890</span>
+                <Phone className="w-5 h-5 flex-shrink-0 text-primary-400 group-hover:scale-110 transition-transform" />
+                <span className="text-primary-100">+91 1234567890</span>
               </li>
               <li className="flex items-center gap-3 group hover:text-white transition-colors">
-                <Mail className="w-5 h-5 flex-shrink-0 text-blue-400 group-hover:scale-110 transition-transform" />
-                <span className="text-blue-100">info@nsriet.edu.in</span>
+                <Mail className="w-5 h-5 flex-shrink-0 text-primary-400 group-hover:scale-110 transition-transform" />
+                <span className="text-primary-100">info@nsriet.edu.in</span>
               </li>
             </ul>
             
@@ -144,7 +144,7 @@ export default function Footer() {
                     key={label}
                     href={href}
                     aria-label={label}
-                    className="p-3 bg-white/10 hover:bg-blue-500 rounded-full transition-all duration-300 hover:scale-110 backdrop-blur-sm"
+                    className="p-3 bg-white/10 hover:bg-primary-500 rounded-full transition-all duration-300 hover:scale-110 backdrop-blur-sm"
                     whileHover={{ scale: 1.2 }}
                     whileTap={{ scale: 0.95 }}
                   >
@@ -167,7 +167,7 @@ export default function Footer() {
               whileInView={{ opacity: 1 }}
               transition={{ duration: 0.5 }}
               viewport={{ once: true }}
-              className="text-sm text-blue-200"
+              className="text-sm text-primary-200"
             >
               © {new Date().getFullYear()} NSRIET. All rights reserved. | <span className="font-medium">Engineering Excellence</span>
             </motion.p>
@@ -182,14 +182,14 @@ export default function Footer() {
             >
               <Link
                 href="/privacy"
-                className="text-blue-200 hover:text-white hover:underline transition-colors group flex items-center gap-1"
+                className="text-primary-200 hover:text-white hover:underline transition-colors group flex items-center gap-1"
               >
                 Privacy Policy
                 <ArrowRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
               </Link>
               <Link
                 href="/terms"
-                className="text-blue-200 hover:text-white hover:underline transition-colors group flex items-center gap-1"
+                className="text-primary-200 hover:text-white hover:underline transition-colors group flex items-center gap-1"
               >
                 Terms of Service
                 <ArrowRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
