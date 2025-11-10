@@ -147,7 +147,11 @@ export default function ThreeSectionPage({
               whileInView="visible"
               viewport={{ once: true, margin: '-100px' }}
             >
+              <motion.h2
+                variants={itemVariants}
                 className="text-3xl md:text-4xl font-bold text-primary-800 dark:text-white mb-8"
+              >
+                {section2.title}
               </motion.h2>
               <motion.div
                 variants={itemVariants}

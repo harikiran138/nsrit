@@ -34,11 +34,11 @@ export default function GoverningBodyPage() {
                 },
               ].map((section, idx) => (
                 <div key={idx} className="p-6 bg-white dark:bg-gray-700 rounded-lg border border-gray-200 dark:border-gray-600">
-                  <h4 className="font-bold text-corporate-navy dark:text-white mb-4">{section.title}</h4>
+                  <h4 className="font-bold text-primary-800 dark:text-white mb-4">{section.title}</h4>
                   <ul className="space-y-2">
                     {section.items.map((item, i) => (
                       <li key={i} className="flex items-center gap-2">
-                        <span className="w-2 h-2 bg-corporate-blue rounded-full"></span>
+                        <span className="w-2 h-2 bg-primary-500 rounded-full"></span>
                         <span className="text-corporate-textSecondary dark:text-gray-400 text-sm">{item}</span>
                       </li>
                     ))}
@@ -63,12 +63,12 @@ export default function GoverningBodyPage() {
               { role: 'Registrar', name: 'Dr. Arun Patel', affiliation: 'Ex-Officio Member' },
             ].map((member, idx) => (
               <div key={idx} className="p-4 bg-white dark:bg-gray-700 rounded-lg border border-gray-200 dark:border-gray-600 flex items-start gap-4">
-                <div className="w-10 h-10 bg-corporate-blue rounded-lg flex items-center justify-center text-white font-bold flex-shrink-0 text-sm">
+                <div className="w-10 h-10 bg-primary-500 rounded-lg flex items-center justify-center text-white font-bold flex-shrink-0 text-sm">
                   {idx + 1}
                 </div>
                 <div className="flex-1">
-                  <h4 className="font-bold text-corporate-navy dark:text-white">{member.role}</h4>
-                  <p className="text-sm text-corporate-blue font-semibold">{member.name}</p>
+                  <h4 className="font-bold text-primary-800 dark:text-white">{member.role}</h4>
+                  <p className="text-sm text-primary-500 font-semibold">{member.name}</p>
                   <p className="text-xs text-corporate-textSecondary dark:text-gray-400">{member.affiliation}</p>
                 </div>
               </div>
@@ -88,8 +88,8 @@ export default function GoverningBodyPage() {
               { principle: 'Ethics', desc: 'Upholding moral and professional values' },
               { principle: 'Inclusivity', desc: 'Representation of diverse perspectives' },
             ].map((item, idx) => (
-              <div key={idx} className="p-4 bg-gradient-to-br from-blue-50 to-transparent dark:from-blue-900/30 rounded-lg border-l-4 border-l-corporate-blue">
-                <h4 className="font-bold text-corporate-navy dark:text-white mb-1 text-sm">{item.principle}</h4>
+              <div key={idx} className="p-4 bg-gradient-to-br from-primary-50 to-transparent dark:from-primary-900/30 rounded-lg border-l-4 border-l-primary-500">
+                <h4 className="font-bold text-primary-800 dark:text-white mb-1 text-sm">{item.principle}</h4>
                 <p className="text-xs text-corporate-textSecondary dark:text-gray-400">{item.desc}</p>
               </div>
             ))}
