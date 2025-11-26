@@ -128,7 +128,7 @@ export default function EmptyState({
   return (
     <div
       className={`flex items-center justify-center min-h-64 px-4 ${
-        showIllustration ? 'bg-gradient-to-br from-primary-50 to-transparent dark:from-primary-900/10 dark:to-transparent' : 'bg-transparent'
+        showIllustration ? 'bg-gradient-to-br from-blue-50 to-transparent dark:from-blue-900/10 dark:to-transparent' : 'bg-transparent'
       } rounded-lg ${className}`}
     >
       <div className="w-full max-w-md text-center">
@@ -140,7 +140,7 @@ export default function EmptyState({
         </div>
 
         {/* Title */}
-        <h3 className="text-xl md:text-2xl font-bold text-primary-800 dark:text-white mb-2">
+        <h3 className="text-xl md:text-2xl font-bold text-corporate-navy dark:text-white mb-2">
           {title}
         </h3>
 

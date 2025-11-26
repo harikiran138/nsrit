@@ -19,7 +19,7 @@ export default function PartnerLogos({ partners, title, description }: PartnerLo
     <div>
       {title && (
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-primary-500 dark:text-white mb-4 font-heading">
+          <h2 className="text-4xl md:text-5xl font-bold text-corporate-blue dark:text-white mb-4 font-heading">
             {title}
           </h2>
           {description && (

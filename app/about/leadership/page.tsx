@@ -15,18 +15,6 @@ const leaders = [
     qualification: 'M.Tech, B.Tech',
     bio: 'Experienced academician focused on curriculum development and faculty excellence',
   },
-  {
-    name: 'Dr. Arun Patel',
-    position: 'Registrar',
-    qualification: 'M.A, M.Com',
-    bio: 'Administrator with expertise in institutional management and compliance',
-  },
-  {
-    name: 'Prof. Neha Singh',
-    position: 'Dean of Students',
-    qualification: 'M.Sc, B.Ed',
-    bio: 'Student welfare champion promoting holistic development and mentorship',
-  },
 ];
 
 export default function LeadershipPage() {

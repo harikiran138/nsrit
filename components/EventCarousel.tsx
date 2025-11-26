@@ -66,7 +66,7 @@ export default function EventCarousel({ events, autoSlide = true, interval = 500
                   sizes="(max-width: 768px) 100vw, 50vw"
                   priority
                 />
-                <div className="absolute top-4 left-4 bg-primary-500 text-white px-3 py-1 text-xs font-semibold">
+                <div className="absolute top-4 left-4 bg-corporate-blue text-white px-3 py-1 text-xs font-semibold">
                   {events[currentIndex].category}
                 </div>
               </div>
@@ -76,13 +76,13 @@ export default function EventCarousel({ events, autoSlide = true, interval = 500
                   <Calendar className="w-5 h-5" />
                   <span className="text-sm font-semibold uppercase tracking-wide">{events[currentIndex].date}</span>
                 </div>
-                <h3 className="text-2xl md:text-3xl font-bold text-primary-800 dark:text-white mb-4">
+                <h3 className="text-2xl md:text-3xl font-bold text-corporate-navy dark:text-white mb-4">
                   {events[currentIndex].title}
                 </h3>
                 <p className="text-muted leading-relaxed mb-6">
                   {events[currentIndex].description}
                 </p>
-                <button className="inline-flex items-center gap-2 px-6 py-3 bg-primary-500 text-white hover:bg-opacity-90 transition-colors w-fit font-semibold bg-glossy-radial">
+                <button className="inline-flex items-center gap-2 px-6 py-3 bg-corporate-blue text-white hover:bg-opacity-90 transition-colors w-fit font-semibold">
                   Learn More
                   <ChevronRight className="w-5 h-5" />
                 </button>
@@ -93,7 +93,7 @@ export default function EventCarousel({ events, autoSlide = true, interval = 500
 
         <button
           onClick={goToPrev}
-          className="absolute left-4 top-1/2 -translate-y-1/2 bg-card text-primary-800 dark:text-white p-3 border border-corporate-border shadow-md hover:shadow-lg transition-shadow z-10"
+          className="absolute left-4 top-1/2 -translate-y-1/2 bg-card text-corporate-navy dark:text-white p-3 border border-corporate-border shadow-md hover:shadow-lg transition-shadow z-10"
           aria-label="Previous event"
         >
           <ChevronLeft className="w-6 h-6" />
@@ -101,7 +101,7 @@ export default function EventCarousel({ events, autoSlide = true, interval = 500
 
         <button
           onClick={goToNext}
-          className="absolute right-4 top-1/2 -translate-y-1/2 bg-card text-primary-800 dark:text-white p-3 border border-corporate-border shadow-md hover:shadow-lg transition-shadow z-10"
+          className="absolute right-4 top-1/2 -translate-y-1/2 bg-card text-corporate-navy dark:text-white p-3 border border-corporate-border shadow-md hover:shadow-lg transition-shadow z-10"
           aria-label="Next event"
         >
           <ChevronRight className="w-6 h-6" />
@@ -115,7 +115,7 @@ export default function EventCarousel({ events, autoSlide = true, interval = 500
             onClick={() => goToSlide(index)}
             className={`h-1.5 transition-all ${
               index === currentIndex
-                ? 'w-6 bg-primary-500'
+                ? 'w-6 bg-corporate-blue'
                 : 'w-1.5 bg-corporate-border hover:bg-corporate-textSecondary'
             }`}
             aria-label={`Go to slide ${index + 1}`}

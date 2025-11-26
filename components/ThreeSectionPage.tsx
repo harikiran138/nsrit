@@ -58,8 +58,8 @@ export default function ThreeSectionPage({
       {/* Hero Section */}
       {heroImage ? (
         <div
-          className="relative h-80 md:h-96 bg-cover bg-center"
-          style={{ backgroundImage: `url(${heroImage})` }}
+          className="relative h-80 md:h-96 bg-cover"
+          style={{ backgroundImage: `url(${heroImage})`, backgroundPosition: 'center 70%' }}
         >
           <div className="absolute inset-0 bg-black/50"></div>
           <div className="relative h-full flex items-center justify-center">
@@ -81,10 +81,10 @@ export default function ThreeSectionPage({
           </div>
         </div>
       ) : (
-        <div className="bg-gradient-to-r from-primary-700 via-primary-500 to-primary-300 text-white py-16 md:py-24 relative overflow-hidden bg-glossy-radial">
+        <div className="bg-gradient-to-r from-corporate-navy via-corporate-blue to-blue-600 text-white py-16 md:py-24 relative overflow-hidden">
           {/* Decorative elements */}
-          <div className="absolute top-0 right-0 w-96 h-96 bg-primary-400 rounded-full mix-blend-multiply filter blur-3xl opacity-10 -mr-32 -mt-32"></div>
-          <div className="absolute bottom-0 left-0 w-96 h-96 bg-primary-300 rounded-full mix-blend-multiply filter blur-3xl opacity-10 -ml-32 -mb-32"></div>
+          <div className="absolute top-0 right-0 w-96 h-96 bg-blue-400 rounded-full mix-blend-multiply filter blur-3xl opacity-10 -mr-32 -mt-32"></div>
+          <div className="absolute bottom-0 left-0 w-96 h-96 bg-blue-300 rounded-full mix-blend-multiply filter blur-3xl opacity-10 -ml-32 -mb-32"></div>
 
           <div className="section-container px-4 sm:px-6 lg:px-8 relative z-10">
             <motion.div
@@ -97,7 +97,7 @@ export default function ThreeSectionPage({
                 {title}
               </h1>
               {subtitle && (
-                <p className="text-lg md:text-xl text-primary-100 max-w-3xl mx-auto leading-relaxed">
+                <p className="text-lg md:text-xl text-blue-100 max-w-3xl mx-auto leading-relaxed">
                   {subtitle}
                 </p>
               )}
@@ -118,7 +118,7 @@ export default function ThreeSectionPage({
             >
               <motion.h2
                 variants={itemVariants}
-                className="text-3xl md:text-4xl font-bold text-primary-800 dark:text-white mb-8"
+                className="text-3xl md:text-4xl font-bold text-corporate-navy dark:text-white mb-8"
               >
                 {section1.title}
               </motion.h2>
@@ -136,7 +136,7 @@ export default function ThreeSectionPage({
       {/* Section 2: Key Features / Details */}
       <section className="py-16 md:py-24 bg-corporate-background dark:bg-gray-800 relative">
         <div className="absolute inset-0 opacity-5">
-          <div className="absolute top-0 right-0 w-96 h-96 bg-primary-500 rounded-full mix-blend-multiply filter blur-3xl"></div>
+          <div className="absolute top-0 right-0 w-96 h-96 bg-corporate-blue rounded-full mix-blend-multiply filter blur-3xl"></div>
         </div>
 
         <div className="section-container px-4 sm:px-6 lg:px-8 relative z-10">
@@ -149,7 +149,7 @@ export default function ThreeSectionPage({
             >
               <motion.h2
                 variants={itemVariants}
-                className="text-3xl md:text-4xl font-bold text-primary-800 dark:text-white mb-8"
+                className="text-3xl md:text-4xl font-bold text-corporate-navy dark:text-white mb-8"
               >
                 {section2.title}
               </motion.h2>
@@ -176,7 +176,7 @@ export default function ThreeSectionPage({
             >
               <motion.h2
                 variants={itemVariants}
-                className="text-3xl md:text-4xl font-bold text-primary-800 dark:text-white mb-8"
+                className="text-3xl md:text-4xl font-bold text-corporate-navy dark:text-white mb-8"
               >
                 {section3.title}
               </motion.h2>

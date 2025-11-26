@@ -80,7 +80,7 @@ export default function ErrorState({
         )}
 
         {/* Title */}
-        <h1 className="text-3xl font-bold text-primary-800 dark:text-white mb-3">
+        <h1 className="text-3xl font-bold text-corporate-navy dark:text-white mb-3">
           {title}
         </h1>
 
@@ -123,7 +123,7 @@ export default function ErrorState({
           If the problem persists, please contact{' '}
           <a
             href="mailto:support@nsrit.edu"
-            className="text-primary-500 hover:text-primary-700 dark:hover:text-primary-400 underline"
+            className="text-corporate-blue hover:text-blue-700 dark:hover:text-blue-400 underline"
           >
             support@nsrit.edu
           </a>

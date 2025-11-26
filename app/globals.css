@@ -136,4 +136,18 @@
   }
   @media (min-width: 640px) { .section-container { padding: 0 1.5rem; } }
   @media (min-width: 1024px) { .section-container { padding: 0 2rem; } }
+
+  /* --- Flip Card 3D Effect Styles --- */
+
+  .flip-card {
+    perspective: 1000px;
+  }
+
+  .flip-card-inner {
+    transform-style: preserve-3d;
+  }
+
+  .backface-hidden {
+    backface-visibility: hidden;
+  }
 }

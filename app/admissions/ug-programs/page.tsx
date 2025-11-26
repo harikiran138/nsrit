@@ -32,9 +32,9 @@ export default function UndergraduatePage() {
                 { name: 'Electrical & Electronics Engineering', intake: '120' },
                 { name: 'Mechanical Engineering', intake: '120' },
               ].map((program) => (
-                <div key={program.name} className="bg-primary-50 dark:bg-primary-900/30 p-4 rounded-lg">
-                  <h3 className="font-bold text-primary-800 dark:text-white mb-2">{program.name}</h3>
-                  <p className="text-sm text-primary-800 dark:text-gray-300"><strong>Intake:</strong> {program.intake} students</p>
+                <div key={program.name} className="bg-blue-50 dark:bg-blue-900/30 p-4 rounded-lg">
+                  <h3 className="font-bold text-corporate-navy dark:text-white mb-2">{program.name}</h3>
+                  <p className="text-sm text-corporate-navy dark:text-gray-300"><strong>Intake:</strong> {program.intake} students</p>
                   <p className="text-sm text-corporate-textSecondary dark:text-gray-400 mt-2">Duration: 4 years | Qualification: 10+2</p>
                 </div>
               ))}
@@ -47,8 +47,8 @@ export default function UndergraduatePage() {
         content: (
           <div className="grid md:grid-cols-2 gap-8">
             <div>
-              <h3 className="text-xl font-bold text-primary-800 dark:text-white mb-4">Eligibility</h3>
-              <ul className="space-y-2 text-primary-800 dark:text-gray-200">
+              <h3 className="text-xl font-bold text-corporate-navy dark:text-white mb-4">Eligibility</h3>
+              <ul className="space-y-2 text-corporate-navy dark:text-gray-200">
                 <li>• 10+2 pass from recognized board</li>
                 <li>• Minimum 50% marks in PCM</li>
                 <li>• Valid JEE Main rank</li>
@@ -56,12 +56,12 @@ export default function UndergraduatePage() {
               </ul>
             </div>
             <div>
-              <h3 className="text-xl font-bold text-primary-800 dark:text-white mb-4">Application Resources</h3>
+              <h3 className="text-xl font-bold text-corporate-navy dark:text-white mb-4">Application Resources</h3>
               <div className="space-y-2">
-                <a href="#" className="block text-primary-500 hover:underline font-medium">📄 Admission Brochure</a>
-                <a href="#" className="block text-primary-500 hover:underline font-medium">📋 Fee Structure</a>
-                <a href="#" className="block text-primary-500 hover:underline font-medium">📝 Apply Online</a>
-                <a href="#" className="block text-primary-500 hover:underline font-medium">❓ FAQ</a>
+                <a href="#" className="block text-corporate-blue hover:underline font-medium">📄 Admission Brochure</a>
+                <a href="#" className="block text-corporate-blue hover:underline font-medium">📋 Fee Structure</a>
+                <a href="#" className="block text-corporate-blue hover:underline font-medium">📝 Apply Online</a>
+                <a href="#" className="block text-corporate-blue hover:underline font-medium">❓ FAQ</a>
               </div>
             </div>
           </div>

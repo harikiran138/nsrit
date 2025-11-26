@@ -22,6 +22,7 @@ export const navigationItems: MenuItem[] = [
       { name: 'Management', href: '/about/management' },
       { name: 'Leadership', href: '/about/leadership' },
       { name: 'Nadimpalli Informatics LLP', href: '/about/nadimpalli-informatics' },
+      { name: 'NSRIT (Autonomous)', href: 'https://www.nsrit.edu.in/' },
     ],
   },
   {
@@ -51,7 +52,7 @@ export const navigationItems: MenuItem[] = [
       },
       { name: 'Competency Based Curriculum', href: '/academics/competency-based-curriculum' },
       { name: 'Best Practices', href: '/academics/best-practices' },
-      { name: 'LMS', href: '/academics/lms' },
+      { name: 'LMS', href: 'https://canvas.instructure.com/login/canvas' },
       { name: 'Academic Calendar', href: '/academics/calendar' },
       { name: 'Knowledge Resource Centre', href: '/academics/krc' },
     ],
@@ -85,7 +86,6 @@ export const navigationItems: MenuItem[] = [
     href: '/industry-linkage',
     submenu: [
       { name: 'MoUs & Collaborations', href: '/industry-linkage/mous' },
-      { name: 'Research & Development Partners', href: '/industry-linkage/rd-partners' },
       { name: 'Industry Visits & Internships', href: '/industry-linkage/visits' },
       { name: 'Startups & Innovation Support', href: '/industry-linkage/startups' },
     ],

@@ -23,7 +23,7 @@ const NavLink = ({ item, onClick }: { item: MenuItem; onClick: () => void }) => 
       <Link
         href={item.href}
         onClick={handleToggle}
-        className="flex items-center justify-between px-4 py-2 text-gray-800 dark:text-gray-200 hover:bg-primary-50 dark:hover:bg-gray-700"
+        className="flex items-center justify-between px-4 py-2 text-gray-800 dark:text-gray-200 hover:bg-blue-50 dark:hover:bg-gray-700"
       >
         {item.name}
         {item.submenu && <ChevronDown className={`w-4 h-4 transition-transform ${isOpen ? 'rotate-180' : ''}`} />}
@@ -43,9 +43,24 @@ export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [openDesktopMenu, setOpenDesktopMenu] = useState<string | null>(null);
   const navRef = useRef<HTMLElement>(null);
+  const timeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   const toggleDesktopMenu = (name: string) => {
     setOpenDesktopMenu(openDesktopMenu === name ? null : name);
+  };
+
+  const handleMouseEnter = (name: string) => {
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
+      timeoutRef.current = null;
+    }
+    setOpenDesktopMenu(name);
+  };
+
+  const handleMouseLeave = () => {
+    timeoutRef.current = setTimeout(() => {
+      setOpenDesktopMenu(null);
+    }, 300); // 300ms delay
   };
 
   useEffect(() => {
@@ -62,27 +77,27 @@ export default function Navbar() {
   }, []);
 
   return (
-    <nav ref={navRef} className="relative z-40 bg-gradient-to-r from-primary-800 to-primary-600 text-white shadow-lg bg-glossy-radial">
-      <div className="bg-corporate-dark border-b-[3px] border-primary-600">
+    <nav ref={navRef} className="relative z-40 bg-gradient-to-r from-corporate-navy to-corporate-blue text-white shadow-lg font-['Arial_Narrow']">
+      <div className="bg-corporate-darkBlue">
         <div className="section-container py-2 flex justify-between items-center text-sm text-white">
           <div>
-            <span className="font-bold">NSRIET</span>
+           
           </div>
-          <div className="hidden lg:flex items-center space-x-4">
-            <Link href="#" className="hover:text-primary-300">Circular Notification</Link>
-            <span>|</span>
-            <Link href="#" className="hover:text-primary-300">Upcoming Events</Link>
-            <span>|</span>
-            <Link href="/quick-links/feedback" className="hover:text-primary-300">Feedback</Link>
-            <span>|</span>
-            <Link href="#" className="hover:text-primary-300">News Bulletin</Link>
-            <span>|</span>
-            <Link href="/cdc/career-guidance" className="hover:text-primary-300">Career Opportunities</Link>
+          <div className="hidden lg:flex items-center space-x-4 text-base font-medium">
+            <Link href="#" className="hover:text-corporate-lightBlue transition-colors">Circular Notification</Link>
+            <span className="text-white/60">|</span>
+            <Link href="#" className="hover:text-corporate-lightBlue transition-colors">Upcoming Events</Link>
+            <span className="text-white/60">|</span>
+            <Link href="/quick-links/feedback" className="hover:text-corporate-lightBlue transition-colors">Feedback</Link>
+            <span className="text-white/60">|</span>
+            <Link href="#" className="hover:text-corporate-lightBlue transition-colors">News Bulletin</Link>
+            <span className="text-white/60">|</span>
+            <Link href="/cdc/career-guidance" className="hover:text-corporate-lightBlue transition-colors">Career Opportunities</Link>
           </div>
         </div>
       </div>
       {/* Logo at the top */}
-      <div className="pt-[10px] pb-3">
+      <div className="pb-1">
         <Link href="/">
           <div className="relative h-20 w-full">
             <Image src="/main-logo1.png" alt="NSRIET Logo" fill className="object-cover" />
@@ -98,20 +113,24 @@ export default function Navbar() {
               <div
                 key={item.name}
                 className="relative"
-                onMouseEnter={() => item.submenu && toggleDesktopMenu(item.name)}
-                onMouseLeave={() => item.submenu && toggleDesktopMenu('')}
+                onMouseEnter={() => item.submenu && handleMouseEnter(item.name)}
+                onMouseLeave={() => item.submenu && handleMouseLeave()}
               >
                 <Link href={item.href} className="text-white hover:opacity-90 font-medium transition-all flex items-center gap-1 py-[7px] px-4 rounded-md hover:bg-white/10">
                   {item.name}
                   {item.submenu && <ChevronDown className={`w-4 h-4 transition-transform ${openDesktopMenu === item.name ? 'rotate-180' : ''}`} />}
                 </Link>
                 {item.submenu && openDesktopMenu === item.name && (
-                  <div className="absolute top-full left-0 mt-2 bg-white dark:bg-gray-800 shadow-lg rounded-md overflow-hidden min-w-[280px] border border-gray-200 dark:border-gray-700">
+                  <div
+                    className="absolute top-full left-0 mt-2 bg-white dark:bg-gray-800 shadow-lg rounded-md overflow-hidden min-w-[280px] border border-gray-200 dark:border-gray-700"
+                    onMouseEnter={() => handleMouseEnter(item.name)}
+                    onMouseLeave={handleMouseLeave}
+                  >
                     {item.submenu.map((subItem) => (
                       <div key={subItem.name} className="relative group/submenu">
                         <Link
                           href={subItem.href}
-                          className="block px-5 py-3 text-gray-800 dark:text-gray-200 hover:bg-primary-50 dark:hover:bg-gray-700 transition-colors font-medium text-sm border-b border-gray-100 dark:border-gray-700 last:border-b-0 flex items-center justify-between"
+                          className="block px-5 py-3 text-gray-800 dark:text-gray-200 hover:bg-blue-50 dark:hover:bg-gray-700 transition-colors font-medium text-sm border-b border-gray-100 dark:border-gray-700 last:border-b-0 flex items-center justify-between"
                         >
                           {subItem.name}
                            {subItem.submenu && <ChevronDown className="w-3 h-3 opacity-50 ml-2" />}
@@ -122,7 +141,7 @@ export default function Navbar() {
                               <Link
                                 key={subSubItem.name}
                                 href={subSubItem.href}
-                                className="block px-4 py-2.5 text-gray-800 dark:text-gray-200 hover:bg-primary-50 dark:hover:bg-gray-700"
+                                className="block px-4 py-2.5 text-gray-800 dark:text-gray-200 hover:bg-blue-50 dark:hover:bg-gray-700"
                               >
                                 {subSubItem.name}
                               </Link>

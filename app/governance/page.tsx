@@ -34,17 +34,17 @@ export default function GovernancePage() {
           <div className="space-y-4">
             <ul className="space-y-2">
               <li>
-                <a href="#" className="flex items-center gap-2 text-primary-500 hover:underline">
+                <a href="#" className="flex items-center gap-2 text-corporate-blue hover:underline">
                   <Download className="w-4 h-4" /> Annual Report 2023
                 </a>
               </li>
               <li>
-                <a href="#" className="flex items-center gap-2 text-primary-500 hover:underline">
+                <a href="#" className="flex items-center gap-2 text-corporate-blue hover:underline">
                   <Download className="w-4 h-4" /> Governance Handbook
                 </a>
               </li>
               <li>
-                <a href="#" className="flex items-center gap-2 text-primary-500 hover:underline">
+                <a href="#" className="flex items-center gap-2 text-corporate-blue hover:underline">
                   <Download className="w-4 h-4" /> Committee Reports
                 </a>
               </li>

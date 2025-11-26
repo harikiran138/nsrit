@@ -19,9 +19,9 @@ export default function Card({
     elevated:
       "bg-card shadow-card hover:shadow-lg hover:-translate-y-1 rounded-lg transition-all duration-300",
     outlined:
-      "border-2 border-primary-200 dark:border-primary-800 rounded-lg bg-transparent hover:bg-primary-50 dark:hover:bg-primary-900/10 transition-colors duration-300",
+      "border-2 border-blue-200 dark:border-blue-800 rounded-lg bg-transparent hover:bg-blue-50 dark:hover:bg-blue-900/10 transition-colors duration-300",
     flat:
-      "bg-primary-50 dark:bg-primary-900/20 rounded-lg hover:bg-primary-100 dark:hover:bg-primary-900/30 transition-colors duration-300",
+      "bg-blue-50 dark:bg-blue-900/20 rounded-lg hover:bg-blue-100 dark:hover:bg-blue-900/30 transition-colors duration-300",
   };
 
   const clickableClass = clickable ? "cursor-pointer" : "";

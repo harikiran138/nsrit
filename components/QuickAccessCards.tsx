@@ -36,22 +36,25 @@ export default function QuickAccessCards() {
     <section className="py-20 md:py-28 bg-surface">
       <div className="section-container px-4 sm:px-6 lg:px-8">
         <AnimatedSection>
-          <div className="grid md:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-8">
             {cardData.map((card, index) => (
               <AnimatedSection key={card.title} delay={index * 0.1}>
                 <Link href={card.href}>
-                  <div className="card group hover:shadow-lg hover:-translate-y-1 transition-all h-full">
-                    <div className="w-12 h-12 bg-gradient-to-br from-primary-50 to-primary-100 dark:from-primary-900 dark:to-primary-800 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                      <card.icon className="w-6 h-6 text-primary-500" />
-                    </div>
-                    <h3 className="text-lg font-bold text-primary-800 dark:text-white mb-3">
-                      {card.title}
-                    </h3>
-                    <p className="text-corporate-textSecondary dark:text-gray-400 text-sm leading-relaxed mb-4">
-                      {card.description}
-                    </p>
-                    <div className="flex items-center text-primary-500 font-semibold text-sm group-hover:gap-2 transition-all">
-                      Learn More <ArrowRight className="w-4 h-4" />
+                  <div className="flip-card group w-full h-56">
+                    <div className="flip-card-inner group-hover:[transform:rotateY(180deg)] transition-transform duration-[1000ms] relative w-full h-full">
+                      {/* Front Side */}
+                      <div className="flip-card-front absolute w-full h-full flex flex-col items-center justify-center bg-[#3B82F6] text-white rounded-xl border-[8px] border-[#3B82F6] backface-hidden">
+                        <card.icon className="w-10 h-10 mb-3 text-white" />
+                        <h3 className="text-xl font-bold">{card.title}</h3>
+                      </div>
+
+                      {/* Back Side */}
+                      <div className="flip-card-back absolute w-full h-full flex flex-col items-center justify-center bg-[#1E40AF] text-white rounded-xl border-[8px] border-[#1E40AF] [transform:rotateY(180deg)] backface-hidden px-4 text-center">
+                        <p className="text-sm mb-3">{card.description}</p>
+                        <div className="flex items-center gap-1 text-white font-semibold text-sm group-hover:gap-2 transition-all">
+                          Learn More <ArrowRight className="w-4 h-4" />
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </Link>

@@ -35,8 +35,8 @@ export default function WhyNSRIETPage() {
                 { title: 'Holistic Development', desc: 'Focus on technical, soft skills, and personality development' },
                 { title: 'Research Culture', desc: 'Active research centers and innovation hubs' },
               ].map((advantage) => (
-                <div key={advantage.title} className="bg-primary-50 dark:bg-primary-900/30 p-4 rounded-lg">
-                  <h3 className="font-bold text-primary-800 dark:text-white mb-2">{advantage.title}</h3>
+                <div key={advantage.title} className="bg-blue-50 dark:bg-blue-900/30 p-4 rounded-lg">
+                  <h3 className="font-bold text-corporate-navy dark:text-white mb-2">{advantage.title}</h3>
                   <p className="text-sm text-corporate-textSecondary dark:text-gray-400">{advantage.desc}</p>
                 </div>
               ))}
@@ -49,8 +49,8 @@ export default function WhyNSRIETPage() {
         content: (
           <div className="grid md:grid-cols-2 gap-8">
             <div>
-              <h3 className="text-xl font-bold text-primary-800 dark:text-white mb-4">Our Strengths</h3>
-              <ul className="space-y-2 text-primary-800 dark:text-gray-200">
+              <h3 className="text-xl font-bold text-corporate-navy dark:text-white mb-4">Our Strengths</h3>
+              <ul className="space-y-2 text-corporate-navy dark:text-gray-200">
                 <li>• 5000+ students enrolled</li>
                 <li>• 8 engineering disciplines</li>
                 <li>• 50+ industry partnerships</li>
@@ -59,12 +59,12 @@ export default function WhyNSRIETPage() {
               </ul>
             </div>
             <div>
-              <h3 className="text-xl font-bold text-primary-800 dark:text-white mb-4">Explore Programs</h3>
+              <h3 className="text-xl font-bold text-corporate-navy dark:text-white mb-4">Explore Programs</h3>
               <div className="space-y-2">
-                <a href="/academics/programs" className="block text-primary-500 hover:underline font-medium">📚 All Programs</a>
-                <a href="/admissions/undergraduate" className="block text-primary-500 hover:underline font-medium">🎓 Undergraduate</a>
-                <a href="/admissions/postgraduate" className="block text-primary-500 hover:underline font-medium">🎓 Postgraduate</a>
-                <a href="/admissions" className="block text-primary-500 hover:underline font-medium">📝 Apply Now</a>
+                <a href="/academics/programs" className="block text-corporate-blue hover:underline font-medium">📚 All Programs</a>
+                <a href="/admissions/undergraduate" className="block text-corporate-blue hover:underline font-medium">🎓 Undergraduate</a>
+                <a href="/admissions/postgraduate" className="block text-corporate-blue hover:underline font-medium">🎓 Postgraduate</a>
+                <a href="/admissions" className="block text-corporate-blue hover:underline font-medium">📝 Apply Now</a>
               </div>
             </div>
           </div>

@@ -54,7 +54,7 @@ export default function HeroSection({
 
   return (
     <section
-      className={`relative ${height} flex flex-col items-center justify-end overflow-hidden bg-white`}
+      className={`relative ${height} flex flex-col items-center justify-center overflow-hidden bg-white`}
       role="banner"
       aria-label="Page Hero Section"
     >
@@ -106,7 +106,7 @@ export default function HeroSection({
             <motion.div variants={itemVariants}>
               <div className={`inline-block mb-4 px-4 py-2 rounded-full text-sm font-semibold border backdrop-blur-sm ${
                 backgroundVariant === 'gradient'
-                  ? 'bg-primary-500/10 text-primary-500 border-primary-500/20'
+                  ? 'bg-corporate-blue/10 text-corporate-blue border-corporate-blue/20'
                   : 'bg-white/20 text-white border-white/50'
               }`}>
                 {subtitle}
@@ -150,7 +150,7 @@ export default function HeroSection({
               {primaryCTA && (
                 <Link
                   href={primaryCTA.href}
-                  className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-primary-500 text-white font-semibold rounded-lg hover:bg-primary-700 transition-all shadow-lg hover:shadow-xl hover:scale-105 duration-300 bg-glossy-radial"
+                  className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-corporate-blue text-white font-semibold rounded-lg hover:bg-blue-700 transition-all shadow-lg hover:shadow-xl hover:scale-105 duration-300"
                 >
                   {primaryCTA.text}
                   <ArrowRight className="w-5 h-5" />
@@ -171,7 +171,7 @@ export default function HeroSection({
 
       {/* Floating Elements (Decorative) */}
       <motion.div
-        className="absolute top-10 right-10 w-32 h-32 bg-primary-500/5 rounded-full blur-3xl"
+        className="absolute top-10 right-10 w-32 h-32 bg-corporate-blue/5 rounded-full blur-3xl"
         animate={{
           y: [0, 20, 0],
           x: [0, 10, 0],
@@ -183,7 +183,7 @@ export default function HeroSection({
         }}
       />
       <motion.div
-        className="absolute bottom-10 left-10 w-40 h-40 bg-primary-500/5 rounded-full blur-3xl"
+        className="absolute bottom-10 left-10 w-40 h-40 bg-blue-500/5 rounded-full blur-3xl"
         animate={{
           y: [0, -20, 0],
           x: [0, -10, 0],

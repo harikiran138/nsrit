@@ -23,17 +23,17 @@ export default function IndustryLinkagePage() {
         content: (
           <div className="grid md:grid-cols-3 gap-8">
             <div className="card">
-              <Handshake className="w-8 h-8 text-primary-500 mb-4" />
+              <Handshake className="w-8 h-8 text-corporate-blue mb-4" />
               <h3 className="text-lg font-bold mb-2">MoUs & Collaborations</h3>
               <p className="text-sm text-gray-600">We have active Memorandums of Understanding with leading companies for joint research, guest lectures, and curriculum development.</p>
             </div>
             <div className="card">
-              <Building className="w-8 h-8 text-primary-500 mb-4" />
+              <Building className="w-8 h-8 text-corporate-blue mb-4" />
               <h3 className="text-lg font-bold mb-2">Industry Visits & Internships</h3>
               <p className="text-sm text-gray-600">Regular industrial visits and mandatory internships provide students with hands-on experience in a professional environment.</p>
             </div>
             <div className="card">
-              <Users className="w-8 h-8 text-primary-500 mb-4" />
+              <Users className="w-8 h-8 text-corporate-blue mb-4" />
               <h3 className="text-lg font-bold mb-2">Expert Lectures & Workshops</h3>
               <p className="text-sm text-gray-600">We invite industry experts to conduct workshops and lectures on the latest technologies and trends.</p>
             </div>
