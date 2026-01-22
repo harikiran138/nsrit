@@ -16,9 +16,9 @@ export default function Button({
   ...props
 }: ButtonProps) {
   const variantClasses = {
-    primary: "btn-primary hover:bg-blue-700 hover:shadow-lg hover:scale-105 active:scale-95",
-    ghost: "btn-ghost hover:bg-blue-50 dark:hover:bg-blue-900/20 active:scale-95",
-    secondary: "bg-gray-200 text-gray-900 hover:bg-gray-300 hover:shadow-md active:scale-95",
+    primary: "btn-primary hover:opacity-90 active:scale-95",
+    ghost: "btn-ghost hover:bg-primary/10 active:scale-95",
+    secondary: "bg-secondary text-corporate-textPrimary hover:bg-gray-200 active:scale-95",
     danger: "bg-red-600 text-white hover:bg-red-700 hover:shadow-lg active:scale-95",
   };
 

@@ -81,10 +81,10 @@ export default function ThreeSectionPage({
           </div>
         </div>
       ) : (
-        <div className="bg-gradient-to-r from-corporate-navy via-corporate-blue to-blue-600 text-white py-16 md:py-24 relative overflow-hidden">
+        <div className="bg-corporate-navy text-white py-16 md:py-24 relative overflow-hidden">
           {/* Decorative elements */}
-          <div className="absolute top-0 right-0 w-96 h-96 bg-blue-400 rounded-full mix-blend-multiply filter blur-3xl opacity-10 -mr-32 -mt-32"></div>
-          <div className="absolute bottom-0 left-0 w-96 h-96 bg-blue-300 rounded-full mix-blend-multiply filter blur-3xl opacity-10 -ml-32 -mb-32"></div>
+          <div className="absolute top-0 right-0 w-96 h-96 bg-primary/20 rounded-full mix-blend-screen filter blur-3xl -mr-32 -mt-32"></div>
+          <div className="absolute bottom-0 left-0 w-96 h-96 bg-accent/10 rounded-full mix-blend-screen filter blur-3xl -ml-32 -mb-32"></div>
 
           <div className="section-container px-4 sm:px-6 lg:px-8 relative z-10">
             <motion.div
@@ -97,7 +97,7 @@ export default function ThreeSectionPage({
                 {title}
               </h1>
               {subtitle && (
-                <p className="text-lg md:text-xl text-blue-100 max-w-3xl mx-auto leading-relaxed">
+                <p className="text-lg md:text-xl text-gray-200 max-w-3xl mx-auto leading-relaxed">
                   {subtitle}
                 </p>
               )}

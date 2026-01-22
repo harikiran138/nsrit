@@ -10,76 +10,136 @@
 
 @layer base {
   :root {
-    --bg: 260 30% 97%;
-    --fg: 215 20% 12%;
+    --bg: 210 20% 98%; /* Light Greyish White */
+    --fg: 222 47% 11%; /* Deep Navy Text */
     --surface: 0 0% 100%;
-    --card: 220 9% 98%;
-    --muted: 215 8% 48%;
-    --border: 220 10% 90%;
-    /* --primary: 217 84% 45%; */
+    --card: 0 0% 100%;
+    --muted: 215 16% 47%;
+    --border: 214 32% 91%;
+    --primary: 210 100% 20%; /* Deep Navy #003366 */
     --primary-foreground: 210 40% 98%;
+    --accent: 43 49% 56%; /* Muted Gold #C5A059 */
   }
 
   .dark {
-    --bg: 222 12% 6%;
+    --bg: 222 47% 11%;
     --fg: 210 40% 98%;
-    --surface: 222 12% 8%;
-    --card: 222 12% 10%;
-    --muted: 220 12% 64%;
-    --border: 220 12% 18%;
-    /* --primary: 217 91% 59%;   */
+    --surface: 217 33% 17%;
+    --card: 217 33% 17%;
+    --muted: 215 20% 65%;
+    --border: 217 33% 25%;
+    --primary: 210 40% 98%;
     --primary-foreground: 222 47% 11%;
+    --accent: 43 49% 56%;
   }
 
-  html, body {
+  html,
+  body {
     height: 100%;
   }
 
   body {
     background-color: hsl(var(--bg));
     color: hsl(var(--fg));
-    font-family: theme('fontFamily.sans');
+    font-family: theme("fontFamily.sans");
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     line-height: 1.6;
     background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%239C92AC' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
   }
 
-  h1 { font-size: 2.25rem; font-weight: 700; letter-spacing: -0.02em; line-height: 1.2; }
-  @media (min-width: 640px) { h1 { font-size: 3rem; } }
-  @media (min-width: 1024px) { h1 { font-size: 3.75rem; } }
+  h1 {
+    font-size: 2.25rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+  }
+  @media (min-width: 640px) {
+    h1 {
+      font-size: 3rem;
+    }
+  }
+  @media (min-width: 1024px) {
+    h1 {
+      font-size: 3.75rem;
+    }
+  }
 
-  h2 { font-size: 1.875rem; font-weight: 700; letter-spacing: -0.02em; line-height: 1.2; }
-  @media (min-width: 640px) { h2 { font-size: 2.25rem; } }
+  h2 {
+    font-size: 1.875rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+  }
+  @media (min-width: 640px) {
+    h2 {
+      font-size: 2.25rem;
+    }
+  }
 
-  h3 { font-size: 1.5rem; font-weight: 600; line-height: 1.33; }
-  @media (min-width: 640px) { h3 { font-size: 1.875rem; } }
+  h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 1.33;
+  }
+  @media (min-width: 640px) {
+    h3 {
+      font-size: 1.875rem;
+    }
+  }
 
-  h4, h5, h6 { font-weight: 600; line-height: 1.33; }
-  p { line-height: 1.75; }
+  h4,
+  h5,
+  h6 {
+    font-weight: 600;
+    line-height: 1.33;
+  }
+  p {
+    line-height: 1.75;
+  }
 
-  a { color: hsl(var(--primary)); transition: opacity 0.2s ease; }
-  a:hover { opacity: 0.8; }
+  a {
+    color: hsl(var(--primary));
+    transition: opacity 0.2s ease;
+  }
+  a:hover {
+    opacity: 0.8;
+  }
 
-  :focus-visible { outline: 2px solid hsl(var(--primary)); outline-offset: 2px; }
+  :focus-visible {
+    outline: 2px solid hsl(var(--primary));
+    outline-offset: 2px;
+  }
 }
 
 @layer components {
-  .bg-surface { background-color: hsl(var(--surface)); }
-  .bg-card { background-color: hsl(var(--card)); }
-  .text-muted { color: hsl(var(--muted)); }
-  .border-base { border-color: hsl(var(--border)); }
+  .bg-surface {
+    background-color: hsl(var(--surface));
+  }
+  .bg-card {
+    background-color: hsl(var(--card));
+  }
+  .text-muted {
+    color: hsl(var(--muted));
+  }
+  .border-base {
+    border-color: hsl(var(--border));
+  }
 
   .card {
     border-radius: 0.75rem;
     border: 1px solid hsl(var(--border));
     padding: 1.5rem;
     background-color: hsl(var(--card));
-    box-shadow: 0 1px 3px rgba(0,0,0,0.06), 0 10px 30px rgba(0,0,0,0.08);
+    box-shadow:
+      0 1px 3px rgba(0, 0, 0, 0.06),
+      0 10px 30px rgba(0, 0, 0, 0.08);
     transition: all 0.3s ease;
   }
   .card:hover {
-    box-shadow: 0 1px 3px rgba(0,0,0,0.08), 0 20px 50px rgba(0,0,0,0.12);
+    box-shadow:
+      0 1px 3px rgba(0, 0, 0, 0.08),
+      0 20px 50px rgba(0, 0, 0, 0.12);
     transform: translateY(-2px);
   }
 
@@ -134,8 +194,16 @@
     margin-right: auto;
     padding: 0 1rem;
   }
-  @media (min-width: 640px) { .section-container { padding: 0 1.5rem; } }
-  @media (min-width: 1024px) { .section-container { padding: 0 2rem; } }
+  @media (min-width: 640px) {
+    .section-container {
+      padding: 0 1.5rem;
+    }
+  }
+  @media (min-width: 1024px) {
+    .section-container {
+      padding: 0 2rem;
+    }
+  }
 
   /* --- Flip Card 3D Effect Styles --- */
 

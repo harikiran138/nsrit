@@ -2,37 +2,99 @@
 
 import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
-import Image from 'next/image'; // Import Image component
-import { Menu, X, ChevronDown } from 'lucide-react';
+import Image from 'next/image';
+import { Menu, X, ChevronDown, Phone, Mail, Search } from 'lucide-react';
 import { navigationItems, MenuItem } from '@/lib/navigation';
+import Container from '@/components/ui/Container';
+import Button from '@/components/ui/Button';
 
-const NavLink = ({ item, onClick }: { item: MenuItem; onClick: () => void }) => {
+const TopBar = () => (
+  <div className="bg-primary text-white py-2 text-sm hidden lg:block">
+    <Container className="flex justify-between items-center">
+      <div className="flex gap-6">
+        <span className="hover:text-gray-200 cursor-pointer flex items-center gap-2">
+          <Phone size={14} /> +91 123 456 7890
+        </span>
+        <span className="hover:text-gray-200 cursor-pointer flex items-center gap-2">
+          <Mail size={14} /> info@nsriet.edu.in
+        </span>
+      </div>
+      <div className="flex gap-4 font-medium">
+        <Link href="/faculty" className="hover:text-accent transition-colors">Faculty</Link>
+        <span className="opacity-30">|</span>
+        <Link href="/students" className="hover:text-accent transition-colors">Students</Link>
+        <span className="opacity-30">|</span>
+        <Link href="/parents" className="hover:text-accent transition-colors">Parents</Link>
+        <span className="opacity-30">|</span>
+        <Link href="/alumni" className="hover:text-accent transition-colors">Alumni</Link>
+      </div>
+    </Container>
+  </div>
+);
+
+const NavItem = ({ item, isMobile = false, closeMenu }: { item: MenuItem; isMobile?: boolean; closeMenu?: () => void }) => {
   const [isOpen, setIsOpen] = useState(false);
+  const hasSubmenu = item.submenu && item.submenu.length > 0;
 
-  const handleToggle = (e: React.MouseEvent) => {
-    if (item.submenu) {
-      e.preventDefault();
-      setIsOpen(!isOpen);
-    } else {
-      onClick();
-    }
-  };
+  if (isMobile) {
+    return (
+      <div className="border-b border-gray-100 last:border-0">
+        <div 
+          className="flex justify-between items-center py-3 px-4 font-medium text-corporate-textPrimary"
+          onClick={() => hasSubmenu && setIsOpen(!isOpen)}
+        >
+          {hasSubmenu ? (
+            <span className="flex-1 flex justify-between items-center">
+              {item.name}
+              <ChevronDown className={`w-4 h-4 transition-transform ${isOpen ? 'rotate-180' : ''}`} />
+            </span>
+          ) : (
+            <Link href={item.href} className="block w-full" onClick={closeMenu}>
+              {item.name}
+            </Link>
+          )}
+        </div>
+        {hasSubmenu && isOpen && (
+          <div className="bg-gray-50 border-t border-gray-100">
+            {item.submenu!.map((sub) => (
+              <Link 
+                key={sub.name} 
+                href={sub.href} 
+                className="block py-2.5 px-8 text-sm text-gray-600 hover:text-primary hover:bg-gray-100"
+                onClick={closeMenu}
+              >
+                {sub.name}
+              </Link>
+            ))}
+          </div>
+        )}
+      </div>
+    );
+  }
 
   return (
-    <div className="relative">
-      <Link
-        href={item.href}
-        onClick={handleToggle}
-        className="flex items-center justify-between px-4 py-2 text-gray-800 dark:text-gray-200 hover:bg-blue-50 dark:hover:bg-gray-700"
+    <div className="relative group h-full flex items-center">
+      <Link 
+        href={item.href} 
+        className="flex items-center gap-1.5 px-4 py-6 text-[15px] font-medium text-corporate-textPrimary hover:text-primary transition-colors border-b-2 border-transparent hover:border-primary"
       >
         {item.name}
-        {item.submenu && <ChevronDown className={`w-4 h-4 transition-transform ${isOpen ? 'rotate-180' : ''}`} />}
+        {hasSubmenu && <ChevronDown className="w-3.5 h-3.5 opacity-50 group-hover:opacity-100" />}
       </Link>
-      {item.submenu && isOpen && (
-        <div className="pl-4">
-          {item.submenu.map((subItem) => (
-            <NavLink key={subItem.name} item={subItem} onClick={onClick} />
-          ))}
+      
+      {hasSubmenu && (
+        <div className="absolute top-full left-0 w-64 bg-white shadow-xl border-t-2 border-primary opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform translate-y-2 group-hover:translate-y-0 z-50 rounded-b-lg">
+          <div className="py-2">
+            {item.submenu!.map((sub) => (
+              <Link 
+                key={sub.name} 
+                href={sub.href} 
+                className="block px-6 py-2.5 text-sm text-gray-600 hover:text-primary hover:bg-gray-50 transition-colors"
+              >
+                {sub.name}
+              </Link>
+            ))}
+          </div>
         </div>
       )}
     </div>
@@ -40,141 +102,76 @@ const NavLink = ({ item, onClick }: { item: MenuItem; onClick: () => void }) => 
 };
 
 export default function Navbar() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [openDesktopMenu, setOpenDesktopMenu] = useState<string | null>(null);
-  const navRef = useRef<HTMLElement>(null);
-  const timeoutRef = useRef<NodeJS.Timeout | null>(null);
-
-  const toggleDesktopMenu = (name: string) => {
-    setOpenDesktopMenu(openDesktopMenu === name ? null : name);
-  };
-
-  const handleMouseEnter = (name: string) => {
-    if (timeoutRef.current) {
-      clearTimeout(timeoutRef.current);
-      timeoutRef.current = null;
-    }
-    setOpenDesktopMenu(name);
-  };
-
-  const handleMouseLeave = () => {
-    timeoutRef.current = setTimeout(() => {
-      setOpenDesktopMenu(null);
-    }, 300); // 300ms delay
-  };
-
-  useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
-      if (navRef.current && !navRef.current.contains(event.target as Node)) {
-        setIsMenuOpen(false);
-        setOpenDesktopMenu(null);
-      }
-    };
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
-    };
-  }, []);
-
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  
   return (
-    <nav ref={navRef} className="relative z-40 bg-gradient-to-r from-corporate-navy to-corporate-blue text-white shadow-lg font-['Arial_Narrow']">
-      <div className="bg-corporate-darkBlue">
-        <div className="section-container py-2 flex justify-between items-center text-sm text-white">
-          <div>
-           
-          </div>
-          <div className="hidden lg:flex items-center space-x-4 text-base font-medium">
-            <Link href="#" className="hover:text-corporate-lightBlue transition-colors">Circular Notification</Link>
-            <span className="text-white/60">|</span>
-            <Link href="#" className="hover:text-corporate-lightBlue transition-colors">Upcoming Events</Link>
-            <span className="text-white/60">|</span>
-            <Link href="/quick-links/feedback" className="hover:text-corporate-lightBlue transition-colors">Feedback</Link>
-            <span className="text-white/60">|</span>
-            <Link href="#" className="hover:text-corporate-lightBlue transition-colors">News Bulletin</Link>
-            <span className="text-white/60">|</span>
-            <Link href="/cdc/career-guidance" className="hover:text-corporate-lightBlue transition-colors">Career Opportunities</Link>
-          </div>
-        </div>
-      </div>
-      {/* Logo at the top */}
-      <div className="pb-1">
-        <Link href="/">
-          <div className="relative h-20 w-full">
-            <Image src="/main-logo1.png" alt="NSRIET Logo" fill className="object-cover" />
-          </div>
-        </Link>
-      </div>
+    <>
+      <TopBar />
+      <header className="sticky top-0 z-50 bg-white border-b border-gray-100 shadow-sm">
+        <Container>
+          <div className="flex justify-between items-center h-20 md:h-24">
+            {/* Logo */}
+            <div className="flex-shrink-0 relative h-16 w-48 md:h-20 md:w-64">
+               <Link href="/">
+                <Image 
+                  src="/main-logo1.png" 
+                  alt="NSRIET Logo" 
+                  fill 
+                  className="object-contain object-left"
+                  priority
+                />
+              </Link>
+            </div>
 
-      <div className="section-container pt-[6px] pb-2 relative">
-        <div className="flex items-center justify-between">
-          {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center gap-0.5">
-            {navigationItems.map((item) => (
-              <div
-                key={item.name}
-                className="relative"
-                onMouseEnter={() => item.submenu && handleMouseEnter(item.name)}
-                onMouseLeave={() => item.submenu && handleMouseLeave()}
-              >
-                <Link href={item.href} className="text-white hover:opacity-90 font-medium transition-all flex items-center gap-1 py-[7px] px-4 rounded-md hover:bg-white/10">
-                  {item.name}
-                  {item.submenu && <ChevronDown className={`w-4 h-4 transition-transform ${openDesktopMenu === item.name ? 'rotate-180' : ''}`} />}
-                </Link>
-                {item.submenu && openDesktopMenu === item.name && (
-                  <div
-                    className="absolute top-full left-0 mt-2 bg-white dark:bg-gray-800 shadow-lg rounded-md overflow-hidden min-w-[280px] border border-gray-200 dark:border-gray-700"
-                    onMouseEnter={() => handleMouseEnter(item.name)}
-                    onMouseLeave={handleMouseLeave}
-                  >
-                    {item.submenu.map((subItem) => (
-                      <div key={subItem.name} className="relative group/submenu">
-                        <Link
-                          href={subItem.href}
-                          className="block px-5 py-3 text-gray-800 dark:text-gray-200 hover:bg-blue-50 dark:hover:bg-gray-700 transition-colors font-medium text-sm border-b border-gray-100 dark:border-gray-700 last:border-b-0 flex items-center justify-between"
-                        >
-                          {subItem.name}
-                           {subItem.submenu && <ChevronDown className="w-3 h-3 opacity-50 ml-2" />}
-                        </Link>
-                        {subItem.submenu && (
-                           <div className="absolute left-full top-0 ml-1 bg-white dark:bg-gray-800 shadow-lg rounded-md overflow-hidden min-w-[280px] border border-gray-200 dark:border-gray-700 opacity-0 invisible group-hover/submenu:opacity-100 group-hover/submenu:visible transition-all">
-                            {subItem.submenu.map((subSubItem) => (
-                              <Link
-                                key={subSubItem.name}
-                                href={subSubItem.href}
-                                className="block px-4 py-2.5 text-gray-800 dark:text-gray-200 hover:bg-blue-50 dark:hover:bg-gray-700"
-                              >
-                                {subSubItem.name}
-                              </Link>
-                            ))}
-                          </div>
-                        )}
-                      </div>
-                    ))}
-                  </div>
-                )}
+            {/* Desktop Nav */}
+            <nav className="hidden lg:flex items-center h-full">
+              {navigationItems.map((item) => (
+                <NavItem key={item.name} item={item} />
+              ))}
+              <div className="ml-6 pl-6 border-l border-gray-200">
+                <Button variant="primary" size="sm" className="font-semibold bg-accent hover:bg-accent/90 border-0 shadow-none rounded-full px-6">
+                  Admissions
+                </Button>
               </div>
-            ))}
-          </div>
+            </nav>
 
-          {/* Mobile Menu Button */}
-          <div className="lg:hidden">
-            <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="p-2 text-white">
-              {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
-            </button>
+            {/* Mobile Menu Toggle */}
+            <div className="lg:hidden">
+              <button 
+                onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                className="p-2 text-gray-600 hover:text-primary focus:outline-none"
+              >
+                {mobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
+              </button>
+            </div>
           </div>
-        </div>
-      </div>
+        </Container>
+      </header>
 
-      {/* Mobile Menu */}
-      {isMenuOpen && (
-        <div className="lg:hidden bg-gray-50 dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800">
-          <div className="px-4 sm:px-6 py-4 space-y-2">
-            {navigationItems.map((item) => (
-              <NavLink key={item.name} item={item} onClick={() => setIsMenuOpen(false)} />
-            ))}
+      {/* Mobile Menu Overlay */}
+      {mobileMenuOpen && (
+        <div className="fixed inset-0 z-40 bg-black/50 lg:hidden" onClick={() => setMobileMenuOpen(false)}>
+          <div 
+            className="absolute top-0 right-0 w-[80%] max-w-sm h-full bg-white shadow-2xl overflow-y-auto"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="p-4 border-b border-gray-100 flex justify-between items-center">
+              <span className="font-bold text-lg text-primary">Menu</span>
+              <button onClick={() => setMobileMenuOpen(false)} className="p-2 text-gray-400 hover:text-red-500">
+                <X size={24} />
+              </button>
+            </div>
+            <div className="py-2">
+              {navigationItems.map((item) => (
+                <NavItem key={item.name} item={item} isMobile closeMenu={() => setMobileMenuOpen(false)} />
+              ))}
+              <div className="p-4 mt-4 bg-gray-50 border-t border-gray-100">
+                <Button className="w-full justify-center bg-accent hover:bg-accent/90">Apply Now</Button>
+              </div>
+            </div>
           </div>
         </div>
       )}
-    </nav>
+    </>
   );
 }

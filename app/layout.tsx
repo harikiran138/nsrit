@@ -1,14 +1,20 @@
 import type { Metadata, Viewport } from "next";
-import { Poppins } from "next/font/google";
+import { Inter, Roboto } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { ThemeProvider } from "@/components/ThemeProvider";
 
-const poppins = Poppins({ 
-  weight: ['300', '400', '600', '700'],
+const inter = Inter({ 
   subsets: ["latin"],
-  variable: '--font-poppins',
+  variable: '--font-inter',
+  display: 'swap',
+});
+
+const roboto = Roboto({
+  weight: ['400', '500', '700'],
+  subsets: ["latin"],
+  variable: '--font-roboto',
   display: 'swap',
 });
 
@@ -43,11 +49,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${poppins.variable} font-sans antialiased`}>
+      <body className={`${inter.variable} ${roboto.variable} font-sans antialiased`}>
         <ThemeProvider>
-          <header className="sticky top-0 z-50 shadow-md">
-            <Navbar />
-          </header>
+          <Navbar />
           <main>
             {children}
           </main>

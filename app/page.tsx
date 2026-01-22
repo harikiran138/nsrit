@@ -1,21 +1,26 @@
-'use client';
-
 import HeroSection from '@/components/HeroSection';
 import Highlights from '@/components/Highlights';
 import QuickAccessCards from '@/components/QuickAccessCards';
+import TrustBar from '@/components/TrustBar';
+import NewsEvents from '@/components/NewsEvents';
+import Testimonials from '@/components/Testimonials';
 
 export default function Home() {
   return (
     <>
-      {/* Hero Section - Background image with text overlay and CTA buttons */}
-      <HeroSection
-        backgroundImage="/hero-bg.png"
+      <HeroSection 
+        title="Empowering Future Innovators"
+        description="A premier engineering institution committed to academic excellence, innovation, and industry collaboration."
       />
+      
+      <TrustBar />
 
-      {/* Highlights Section */}
       <Highlights />
 
-      {/* Quick Access Cards Section */}
+      <NewsEvents />
+
+      <Testimonials />
+
       <QuickAccessCards />
     </>
   );

@@ -11,32 +11,40 @@ const config: Config = {
     extend: {
       colors: {
         primary: {
-          50: '#f5f3ff',
-          100: '#ede9fe',
-          200: '#ddd6fe',
-          300: '#c4b5fd',
-          400: '#a78bfa',
-          500: '#8b5cf6',
-          600: '#7c3aed',
-          700: '#6d28d9',
-          800: '#5b21b6',
-          900: '#4c1d95',
-          950: '#2e1065',
+          DEFAULT: '#003366', // Deep Navy
+          50: '#f0f4f8',
+          100: '#d9e2ec',
+          200: '#bcccdc',
+          300: '#9fb3c8',
+          400: '#829ab1',
+          500: '#627d98',
+          600: '#486581',
+          700: '#334e68',
+          800: '#243b53',
+          900: '#102a43',
+        },
+        secondary: {
+          DEFAULT: '#F4F6F8', // Light Grey Background
+        },
+        accent: {
+          DEFAULT: '#C5A059', // Muted Gold
+          hover: '#b08d4a',
         },
         corporate: {
           navy: '#003366',
-          blue: '#0066cc',
+          blue: '#004b93',
+          gold: '#C5A059',
           dark: '#001a33',
           lightBlue: '#3399ff',
-          background: '#f8f9fa',
-          textPrimary: '#212529',
-          textSecondary: '#5a5a5a',
-          border: '#e4e7eb',
+          background: '#F4F6F8',
+          textPrimary: '#1a1f2c', // Darker generic text
+          textSecondary: '#4a5568',
+          border: '#e2e8f0',
         }
       },
       fontFamily: {
-        sans: ['var(--font-poppins)', 'system-ui', 'sans-serif'],
-        heading: ['var(--font-poppins)', 'system-ui', 'sans-serif'],
+        sans: ['var(--font-inter)', 'system-ui', 'sans-serif'],
+        heading: ['var(--font-roboto)', 'system-ui', 'sans-serif'],
       },
       backgroundImage: {
         'glossy-radial': 'radial-gradient(circle at top, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0) 50%)',

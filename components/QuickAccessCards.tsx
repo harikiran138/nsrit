@@ -2,7 +2,8 @@
 
 import Link from 'next/link';
 import { ArrowRight, BookOpen, GraduationCap, Briefcase, Users } from 'lucide-react';
-import AnimatedSection from './AnimatedSection';
+import Section from '@/components/ui/Section';
+import Card from '@/components/ui/Card';
 
 const cardData = [
   {
@@ -19,7 +20,7 @@ const cardData = [
   },
   {
     icon: Briefcase,
-    title: 'CDC',
+    title: 'Career Development',
     description: 'Learn about our successful placement records and career opportunities.',
     href: '/cdc',
   },
@@ -33,36 +34,27 @@ const cardData = [
 
 export default function QuickAccessCards() {
   return (
-    <section className="py-20 md:py-28 bg-surface">
-      <div className="section-container px-4 sm:px-6 lg:px-8">
-        <AnimatedSection>
-          <div className="grid md:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-8">
-            {cardData.map((card, index) => (
-              <AnimatedSection key={card.title} delay={index * 0.1}>
-                <Link href={card.href}>
-                  <div className="flip-card group w-full h-56">
-                    <div className="flip-card-inner group-hover:[transform:rotateY(180deg)] transition-transform duration-[1000ms] relative w-full h-full">
-                      {/* Front Side */}
-                      <div className="flip-card-front absolute w-full h-full flex flex-col items-center justify-center bg-[#3B82F6] text-white rounded-xl border-[8px] border-[#3B82F6] backface-hidden">
-                        <card.icon className="w-10 h-10 mb-3 text-white" />
-                        <h3 className="text-xl font-bold">{card.title}</h3>
-                      </div>
-
-                      {/* Back Side */}
-                      <div className="flip-card-back absolute w-full h-full flex flex-col items-center justify-center bg-[#1E40AF] text-white rounded-xl border-[8px] border-[#1E40AF] [transform:rotateY(180deg)] backface-hidden px-4 text-center">
-                        <p className="text-sm mb-3">{card.description}</p>
-                        <div className="flex items-center gap-1 text-white font-semibold text-sm group-hover:gap-2 transition-all">
-                          Learn More <ArrowRight className="w-4 h-4" />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </Link>
-              </AnimatedSection>
-            ))}
-          </div>
-        </AnimatedSection>
+    <Section background="light" className="py-12">
+      <div className="grid md:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-6">
+        {cardData.map((card) => (
+          <Link href={card.href} key={card.title} className="block group">
+            <Card variant="default" className="h-full p-6 hover:border-corporate-blue/30 hover:shadow-lg transition-all">
+              <div className="mb-4 text-corporate-blue group-hover:scale-110 transition-transform duration-300 origin-left">
+                <card.icon size={32} />
+              </div>
+              <h3 className="text-xl font-bold text-corporate-navy mb-2 group-hover:text-corporate-blue transition-colors">
+                {card.title}
+              </h3>
+              <p className="text-sm text-gray-500 mb-4 leading-relaxed">
+                {card.description}
+              </p>
+              <div className="flex items-center gap-2 text-sm font-semibold text-corporate-blue opacity-0 group-hover:opacity-100 transition-opacity transform translate-x-[-10px] group-hover:translate-x-0 duration-300">
+                Learn More <ArrowRight className="w-4 h-4" />
+              </div>
+            </Card>
+          </Link>
+        ))}
       </div>
-    </section>
+    </Section>
   );
 }
