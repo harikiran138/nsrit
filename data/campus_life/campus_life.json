@@ -1,0 +1,17 @@
+{
+  "facilities": [
+    { "name": "Computer Center", "url": "https://nsrit.edu.in/campus-life/facilities/computer-center/" },
+    { "name": "Library", "url": "https://nsrit.edu.in/campus-life/facilities/library/" },
+    { "name": "Seminar Hall", "url": "https://nsrit.edu.in/campus-life/facilities/seminar-hall/" },
+    { "name": "Transport", "url": "https://nsrit.edu.in/campus-life/facilities/transport/" },
+    { "name": "Cafeteria & Hostel", "url": "https://nsrit.edu.in/campus-life/facilities/cafteria-hostel/" },
+    { "name": "Talent Incubation Center", "url": "https://nsrit.edu.in/campus-life/facilities/talent-incubation-center/" },
+    { "name": "Makers Space", "url": "https://nsrit.edu.in/campus-life/facilities/makers-space/" },
+    { "name": "Design Space", "url": "https://nsrit.edu.in/campus-life/facilities/design-space/" },
+    { "name": "Recording Studio", "url": "https://nsrit.edu.in/campus-life/facilities/recording-studio/" }
+  ],
+  "clubs": "https://nsrit.edu.in/campus-life/clubs/",
+  "sports": "https://nsrit.edu.in/campus-life/sports/",
+  "nss_yrc": "https://nsrit.edu.in/campus-life-2/nss-yrc/",
+  "newsletter": "https://nsrit.edu.in/campus-life-2/newsletter/"
+}

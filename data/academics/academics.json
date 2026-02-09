@@ -1,0 +1,62 @@
+{
+  "courses": [
+    {
+      "name": "Electrical & Electronics Engineering (EEE)",
+      "intake": "60"
+    },
+    {
+      "name": "Mechanical Engineering (ME)",
+      "intake": "60"
+    },
+    {
+      "name": "Electronics and Communication Engineering (ECE)",
+      "intake": "300"
+    },
+    {
+      "name": "Computer Science and Engineering (CSE)",
+      "intake": "360"
+    },
+    {
+      "name": "Civil Engineering (CE)",
+      "intake": "30"
+    },
+    {
+      "name": "Computer Science & Engineering (AI & ML)",
+      "intake": "240"
+    },
+    {
+      "name": "Computer Science & Engineering (DS)",
+      "intake": "60"
+    },
+    {
+      "name": "M.Tech(Thermal Engineering)",
+      "intake": "12"
+    }
+  ],
+  "departments": [
+    {
+      "name": "Civil Engineering",
+      "url": "https://nsrit.edu.in/civil-engineering/"
+    },
+    {
+      "name": "Mechanical Engineering",
+      "url": "https://nsrit.edu.in/mechanical-engineering/"
+    },
+    {
+      "name": "Civil Engineering",
+      "url": "https://nsrit.edu.in/civil-engineering/"
+    },
+    {
+      "name": "Mechanical Engineering",
+      "url": "https://nsrit.edu.in/mechanical-engineering/"
+    },
+    {
+      "name": "Civil Engineering",
+      "url": "https://nsrit.edu.in/civil-engineering/"
+    },
+    {
+      "name": "Mechanical Engineering",
+      "url": "https://nsrit.edu.in/mechanical-engineering/"
+    }
+  ]
+}

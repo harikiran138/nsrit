@@ -1,0 +1,15 @@
+{
+  "dean": {
+    "name": "Dr. D. Sirisha",
+    "designation": "Professor & Dean R&D",
+    "department": "Computer Science & Engineering",
+    "email": "deanrnd@nsrit.edu.in"
+  },
+  "profile": "https://nsrit.edu.in/rd/profile/",
+  "coreTeam": "https://nsrit.edu.in/rd/core-team/",
+  "infrastructure": "https://nsrit.edu.in/wp-content/uploads/2025/12/RD-Infrastructure.pdf",
+  "projects": "https://nsrit.edu.in/rd/projects/",
+  "researchAreas": "https://nsrit.edu.in/rd/research-areas/",
+  "consultancy": "https://nsrit.edu.in/wp-content/uploads/2025/12/Summary-of-Consultancy.pdf",
+  "contact": "https://nsrit.edu.in/rd/contact-us/"
+}

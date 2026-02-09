@@ -1,0 +1,18 @@
+{
+  "feeStructure": {
+    "academicYear": "2024-25",
+    "ugFees": [
+      { "program": "B.Tech", "fee": 43000 },
+      { "program": "BBA", "fee": 18000 },
+      { "program": "BCA", "fee": 18000 }
+    ],
+    "pgFees": [
+      { "program": "M.Tech", "fee": 50000 },
+      { "program": "MBA", "fee": 35000 },
+      { "program": "MCA", "fee": 35000 }
+    ]
+  },
+  "policies": {
+    "admissionPolicy": "https://nsrit.edu.in/wp-content/uploads/2025/12/ADMISSION-POLICY.pdf"
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "studentAchievements": [
+    {
+      "name": "G. SARATH CHANDRA",
+      "rollNo": "14NU1A0311",
+      "batch": "2014-18",
+      "achievement": "University Gold Medalist",
+      "percentage": "88.41%",
+      "description": "Congratulates the University Gold Medalist G.Sarath Chandra, Roll No: 14NU1A0311, Preclinical Engineering Batch - 2014 -18"
+    },
+    {
+      "name": "G. PUSHPA LATHA",
+      "rollNo": "12NU1A0414",
+      "batch": "2012-16",
+      "achievement": "Padmabushan Dr.B.V Raju Memorial Gold Medal Award of Merit"
+    }
+  ],
+  "facultyAchievements": [
+    {
+      "name": "Dr P. Naga Eswara Naveen",
+      "department": "Mechanical",
+      "achievement": "Awarded Ph.D from GITAM University, Visakhapatnam",
+      "description": "Congratulations to Dr P. Naga Eswara Naveen, Department of Mechanical, Awarded Ph.D from  GITAM University, Visakhapatnam ."
+    },
+    {
+      "name": "Dr. E. Madhavi",
+      "qualification": "M.Sc., Ph.D",
+      "department": "S&H",
+      "achievement": "Awarded Ph.D Degree from Andhra University, Visakhapatnam",
+      "description": "Congratulations to Dr. E.Madhavi,M.Sc., Ph.D, Department of S&H, awarded Ph.D Degree from Andhra University, Visakhapatnam."
+    }
+  ],
+  "associations": {
+    "title": "Our Associations",
+    "subtitle": "GLOBAL OUTREACH",
+    "organizations": [
+      "ASME",
+      "IETE",
+      "ISTE",
+      "SAE",
+      "IEE",
+      "ACM STUDENTS CHAPTER"
+    ]
+  }
+}

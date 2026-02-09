@@ -1,0 +1,45 @@
+{
+  "founders": [
+    {
+      "name": "1",
+      "designation": "Sri. N. Satyanarayana Raju"
+    },
+    {
+      "name": "2",
+      "designation": "Smt. N.Padmavathi"
+    },
+    {
+      "name": "3",
+      "designation": "Dr. N. Prasada Raju"
+    },
+    {
+      "name": "4",
+      "designation": "Sri. N. Krishnam Raju"
+    },
+    {
+      "name": "5",
+      "designation": "Sri. N. Kanaka Raju"
+    },
+    {
+      "name": "6",
+      "designation": "Smt. Ch. Indira priya darshini"
+    },
+    {
+      "name": "7",
+      "designation": "Smt. K. R. V. P. Sandya"
+    },
+    {
+      "name": "8",
+      "designation": "Sri. K. Sitaramanjanaya Raju"
+    },
+    {
+      "name": "9",
+      "designation": "Smt. Komala Devi"
+    }
+  ],
+  "messages": {
+    "president": "...",
+    "principal": "...",
+    "cmo": "..."
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "departments": [
+    { "name": "Civil Engineering", "url": "https://nsrit.edu.in/civil-engineering/", "established": 2014 },
+    { "name": "Mechanical Engineering", "url": "https://nsrit.edu.in/mechanical-engineering/" },
+    { "name": "Electrical & Electronics Engineering", "url": "https://nsrit.edu.in/electrical-electronics-engineering/" },
+    { "name": "Electronics & Communication Engineering", "url": "https://nsrit.edu.in/electronics-communication-engineering/" },
+    { "name": "Computer Science & Engineering", "url": "https://nsrit.edu.in/computer-science-engineering/" },
+    { "name": "Computer Science & Engineering (AI & ML)", "url": "https://nsrit.edu.in/computer-science-engineering-ai-ml/" },
+    { "name": "Computer Science & Engineering (DS)", "url": "https://nsrit.edu.in/computer-science-engineering-ds/" },
+    { "name": "Science & Humanities (S & H)", "url": "https://nsrit.edu.in/s-h/" },
+    { "name": "MBA", "url": "https://nsrit.edu.in/mba/" },
+    { "name": "MCA", "url": "https://nsrit.edu.in/computer-science-engineering/mca-faculty/" }
+  ],
+  "ugPrograms": [
+    { "branch": "Electrical & Electronics Engineering (EEE)", "intake": 60 },
+    { "branch": "Mechanical Engineering (ME)", "intake": 60 },
+    { "branch": "Electronics and Communication Engineering (ECE)", "intake": 300 },
+    { "branch": "Computer Science and Engineering (CSE)", "intake": 360 },
+    { "branch": "Civil Engineering (CE)", "intake": 30 },
+    { "branch": "Computer Science & Engineering (AI & ML)", "intake": 240 },
+    { "branch": "Computer Science & Engineering (DS)", "intake": 60 },
+    { "branch": "BCA", "intake": 60 },
+    { "branch": "BBA", "intake": 60 }
+  ],
+  "pgPrograms": [
+    { "branch": "M.Tech (Thermal Engineering)", "intake": 12 },
+    { "branch": "M.Tech (Power Systems Control and Automation)", "intake": 12 },
+    { "branch": "M.Tech (CSE)", "intake": 12 },
+    { "branch": "M.Tech (VLSI & ES)", "intake": 12 },
+    { "branch": "MBA", "intake": 120 },
+    { "branch": "MCA", "intake": 120 }
+  ],
+  "researchPrograms": [
+    "Department of Mathematics",
+    "Department of Electrical & Electronics Engineering",
+    "Department of Mechanical Engineering"
+  ]
+}
